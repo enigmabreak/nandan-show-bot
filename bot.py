@@ -2,6 +2,7 @@ import time
 from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import requests
 import os
@@ -25,12 +26,17 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# Headless Chrome setup
-options = Options()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
-driver = webdriver.Chrome(options=options)
+def create_driver():
+    """Create a headless Chrome driver with suppressed logs."""
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--log-level=3")  # Suppress logs
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    service = Service("chromedriver.exe")
+    driver = webdriver.Chrome(service=service, options=options)
+    return driver
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -40,7 +46,7 @@ def send_telegram_message(message):
     except Exception as e:
         logging.error(f"Failed to send Telegram message: {e}")
 
-def check_date(date_obj):
+def check_date(driver, date_obj):
     date_str = date_obj.strftime("%Y%m%d")
     url = f"{BASE_URL}/{date_str}"
     driver.get(url)
@@ -52,7 +58,7 @@ def check_date(date_obj):
         btns = driver.find_elements(By.CSS_SELECTOR, "a.__showtime-link")
         available = any(btn.get_attribute("href") and not btn.get_attribute("disabled") for btn in btns)
         if available:
-            send_telegram_message(f" {MOVIE_NAME} available on {date_obj.strftime('%d %B %Y')}!\nBook here: {url}")
+            send_telegram_message(f"{MOVIE_NAME} available on {date_obj.strftime('%d %B %Y')}!\nBook here: {url}")
             logging.info(f"[{date_str}] AVAILABLE — notified user.")
             return True
         else:
@@ -64,25 +70,39 @@ def check_date(date_obj):
 def check_movie_showtimes():
     """Check the next 7 days for the movie."""
     today = datetime.today()
-    for i in range(1, 8):  # next 7 days
-        try:
-            check_date(today + timedelta(days=i))
-        except Exception as e:
-            logging.error(f"Error checking date: {e}")
+    driver = create_driver()
+    try:
+        for i in range(1, 8):  # next 7 days
+            try:
+                check_date(driver, today + timedelta(days=i))
+            except Exception as e:
+                logging.error(f"Error checking date: {e}")
+    finally:
+        driver.quit()
+
+def selenium_test():
+    """Quick browser test to check Selenium + ChromeDriver setup."""
+    driver = create_driver()
+    driver.get("https://example.com")
+    print("Test page title:", driver.title)
+    driver.quit()
 
 if __name__ == "__main__":
     import sys
 
     if len(sys.argv) > 1 and sys.argv[1].lower() == "test":
-        print(" Sending test Telegram message...")
-        send_telegram_message(" Test message from nandan-show-bot!")
-        print(" Message sent. Check your Telegram.")
+        # Run Selenium test
+        selenium_test()
+        # Send Telegram test message
+        print("Sending test Telegram message...")
+        send_telegram_message("Test message from nandan-show-bot!")
+        print("Message sent. Check your Telegram.")
     else:
-        logging.info(" Dhumketu Ticket Watch Bot started...")
+        logging.info("Dhumketu Ticket Watch Bot started...")
         try:
             while True:
                 check_movie_showtimes()
                 logging.info(f"Sleeping for {CHECK_INTERVAL} seconds...")
                 time.sleep(CHECK_INTERVAL)
         except KeyboardInterrupt:
-            print("\n Stopped by user")
+            print("\nStopped by user")

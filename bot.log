@@ -1,0 +1,175 @@
+2025-08-15 12:30:50,815 - INFO -  Dhumketu Ticket Watch Bot started...
+2025-08-15 12:30:56,434 - INFO - [20250816] Not listed yet.
+2025-08-15 12:31:01,589 - INFO - [20250817] Not listed yet.
+2025-08-15 12:31:06,714 - INFO - [20250818] Not listed yet.
+2025-08-15 12:31:11,807 - INFO - [20250819] Not listed yet.
+2025-08-15 12:31:16,903 - INFO - [20250820] Not listed yet.
+2025-08-15 12:31:22,039 - INFO - [20250821] Not listed yet.
+2025-08-15 12:31:27,159 - INFO - [20250822] Not listed yet.
+2025-08-15 12:31:27,160 - INFO - Sleeping for 900 seconds...
+2025-08-15 13:03:16,409 - INFO -  Dhumketu Ticket Watch Bot started...
+2025-08-15 13:03:22,011 - INFO - [20250816] Not listed yet.
+2025-08-15 13:03:27,100 - INFO - [20250817] Not listed yet.
+2025-08-15 13:03:32,264 - INFO - [20250818] Not listed yet.
+2025-08-15 13:03:37,367 - INFO - [20250819] Not listed yet.
+2025-08-15 13:03:42,495 - INFO - [20250820] Not listed yet.
+2025-08-15 13:03:47,608 - INFO - [20250821] Not listed yet.
+2025-08-15 13:03:52,736 - INFO - [20250822] Not listed yet.
+2025-08-15 13:03:52,736 - INFO - Sleeping for 900 seconds...
+2025-08-15 13:05:26,006 - ERROR - Error checking date: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=139.0.7258.128); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761c0ea]
+	(No symbol) [0x0x7ff627608355]
+	(No symbol) [0x0x7ff62762cefa]
+	(No symbol) [0x0x7ff6276a2845]
+	(No symbol) [0x0x7ff6276c2d02]
+	(No symbol) [0x0x7ff62769af13]
+	(No symbol) [0x0x7ff627664151]
+	(No symbol) [0x0x7ff627664ee3]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	GetHandleVerifier [0x0x7ff62788f914+115956]
+	GetHandleVerifier [0x0x7ff62788fac9+116393]
+	GetHandleVerifier [0x0x7ff627875ef8+10968]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,198 - ERROR - Error checking date: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761bf1c]
+	(No symbol) [0x0x7ff62766327f]
+	(No symbol) [0x0x7ff62769b002]
+	(No symbol) [0x0x7ff627695b23]
+	(No symbol) [0x0x7ff627694be9]
+	(No symbol) [0x0x7ff6275e6fd5]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	(No symbol) [0x0x7ff6275e5fd1]
+	GetHandleVerifier [0x0x7ff627c5e428+4108296]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,200 - ERROR - Error checking date: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761bf1c]
+	(No symbol) [0x0x7ff62766327f]
+	(No symbol) [0x0x7ff62769b002]
+	(No symbol) [0x0x7ff627695b23]
+	(No symbol) [0x0x7ff627694be9]
+	(No symbol) [0x0x7ff6275e6fd5]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	(No symbol) [0x0x7ff6275e5fd1]
+	GetHandleVerifier [0x0x7ff627c5e428+4108296]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,202 - ERROR - Error checking date: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761bf1c]
+	(No symbol) [0x0x7ff62766327f]
+	(No symbol) [0x0x7ff62769b002]
+	(No symbol) [0x0x7ff627695b23]
+	(No symbol) [0x0x7ff627694be9]
+	(No symbol) [0x0x7ff6275e6fd5]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	(No symbol) [0x0x7ff6275e5fd1]
+	GetHandleVerifier [0x0x7ff627c5e428+4108296]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,203 - ERROR - Error checking date: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761bf1c]
+	(No symbol) [0x0x7ff62766327f]
+	(No symbol) [0x0x7ff62769b002]
+	(No symbol) [0x0x7ff627695b23]
+	(No symbol) [0x0x7ff627694be9]
+	(No symbol) [0x0x7ff6275e6fd5]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	(No symbol) [0x0x7ff6275e5fd1]
+	GetHandleVerifier [0x0x7ff627c5e428+4108296]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,205 - ERROR - Error checking date: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761bf1c]
+	(No symbol) [0x0x7ff62766327f]
+	(No symbol) [0x0x7ff62769b002]
+	(No symbol) [0x0x7ff627695b23]
+	(No symbol) [0x0x7ff627694be9]
+	(No symbol) [0x0x7ff6275e6fd5]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	(No symbol) [0x0x7ff6275e5fd1]
+	GetHandleVerifier [0x0x7ff627c5e428+4108296]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,206 - ERROR - Error checking date: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff627886b25+79621]
+	GetHandleVerifier [0x0x7ff627886b80+79712]
+	(No symbol) [0x0x7ff62761bf1c]
+	(No symbol) [0x0x7ff62766327f]
+	(No symbol) [0x0x7ff62769b002]
+	(No symbol) [0x0x7ff627695b23]
+	(No symbol) [0x0x7ff627694be9]
+	(No symbol) [0x0x7ff6275e6fd5]
+	GetHandleVerifier [0x0x7ff627b4683d+2962461]
+	GetHandleVerifier [0x0x7ff627b40b5d+2938685]
+	GetHandleVerifier [0x0x7ff627b5f71d+3064573]
+	GetHandleVerifier [0x0x7ff6278a0c6e+186446]
+	GetHandleVerifier [0x0x7ff6278a8a3f+218655]
+	(No symbol) [0x0x7ff6275e5fd1]
+	GetHandleVerifier [0x0x7ff627c5e428+4108296]
+	BaseThreadInitThunk [0x0x7ff95d0fe8d7+23]
+	RtlUserThreadStart [0x0x7ff95e25c34c+44]
+
+2025-08-15 13:05:26,207 - INFO - Sleeping for 900 seconds...
+2025-08-15 13:39:49,259 - INFO - Sent Telegram message: Test message from nandan-show-bot!
+2025-08-15 13:46:03,695 - INFO - Sent Telegram message: Test message from nandan-show-bot!
+2025-08-15 13:47:19,481 - INFO - Dhumketu Ticket Watch Bot started...
+2025-08-15 13:47:25,059 - INFO - [20250816] Not listed yet.
+2025-08-15 13:47:30,203 - INFO - [20250817] Not listed yet.
+2025-08-15 13:47:35,326 - INFO - [20250818] Not listed yet.
+2025-08-15 13:47:40,426 - INFO - [20250819] Not listed yet.
+2025-08-15 13:47:45,570 - INFO - [20250820] Not listed yet.
+2025-08-15 13:47:50,781 - INFO - [20250821] Not listed yet.
+2025-08-15 13:47:55,910 - INFO - [20250822] Not listed yet.
+2025-08-15 13:47:55,910 - INFO - Sleeping for 900 seconds...
