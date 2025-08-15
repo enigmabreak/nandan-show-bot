@@ -14,8 +14,7 @@ TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
 # Config
-CINEMA_CODE = "NNKA"
-BASE_URL = "https://in.bookmyshow.com/cinemas/kolk/nandan-kolkata/buytickets"
+BASE_URL = "https://in.bookmyshow.com/cinemas/kolk/nandan-kolkata/buytickets/NNKA/"
 MOVIE_NAME = "Dhumketu (UA 13+)"
 CHECK_INTERVAL = 900  # 15 min
 
@@ -43,7 +42,7 @@ def send_telegram_message(message):
 
 def check_date(date_obj):
     date_str = date_obj.strftime("%Y%m%d")
-    url = f"{BASE_URL}/{CINEMA_CODE}/{date_str}"
+    url = f"{BASE_URL}/{date_str}"
     driver.get(url)
     time.sleep(5)  # Wait for JS to load
 
@@ -53,7 +52,7 @@ def check_date(date_obj):
         btns = driver.find_elements(By.CSS_SELECTOR, "a.__showtime-link")
         available = any(btn.get_attribute("href") and not btn.get_attribute("disabled") for btn in btns)
         if available:
-            send_telegram_message(f"🎬 {MOVIE_NAME} available on {date_obj.strftime('%d %B %Y')}!\nBook here: {url}")
+            send_telegram_message(f" {MOVIE_NAME} available on {date_obj.strftime('%d %B %Y')}!\nBook here: {url}")
             logging.info(f"[{date_str}] AVAILABLE — notified user.")
             return True
         else:
@@ -62,14 +61,28 @@ def check_date(date_obj):
         logging.info(f"[{date_str}] Not listed yet.")
     return False
 
+def check_movie_showtimes():
+    """Check the next 7 days for the movie."""
+    today = datetime.today()
+    for i in range(1, 8):  # next 7 days
+        try:
+            check_date(today + timedelta(days=i))
+        except Exception as e:
+            logging.error(f"Error checking date: {e}")
+
 if __name__ == "__main__":
-    logging.info("Dhumketu Ticket Watch Bot started...")
-    while True:
-        today = datetime.today()
-        for i in range(1, 8):  # Check next 7 days
-            try:
-                check_date(today + timedelta(days=i))
-            except Exception as e:
-                logging.error(f"Error checking date: {e}")
-        logging.info(f"Sleeping for {CHECK_INTERVAL} seconds...\n")
-        time.sleep(CHECK_INTERVAL)
+    import sys
+
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "test":
+        print(" Sending test Telegram message...")
+        send_telegram_message(" Test message from nandan-show-bot!")
+        print(" Message sent. Check your Telegram.")
+    else:
+        logging.info(" Dhumketu Ticket Watch Bot started...")
+        try:
+            while True:
+                check_movie_showtimes()
+                logging.info(f"Sleeping for {CHECK_INTERVAL} seconds...")
+                time.sleep(CHECK_INTERVAL)
+        except KeyboardInterrupt:
+            print("\n Stopped by user")
